@@ -70,7 +70,8 @@ void LinkedList<T>::addNodeLast(T *) {
 }
 
 template<class T>
-void LinkedList<T>::addNodeFirst(T *) {
+void LinkedList<T>::addNodeFirst(T * node) {
+    Node<T> *xxxx = new Node<T>( node );
 
 }
 /**
