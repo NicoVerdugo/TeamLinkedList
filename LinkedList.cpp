@@ -74,8 +74,15 @@ void LinkedList<T>::addNodeBeforeTo(Node<T> *, T *) {
 
 }
 
+/**
+ * Responsable Nicolás Chaparro
+ * Método que agrega un nodo después de...
+ */
 template<class T>
 void LinkedList<T>::addNodeAfterTo(Node<T> *, T *) {
+     Node<T>* newNode = new Node<T>(value); // Crea un nuevo nodo con el valor dado
+    newNode->next = node->next; // Establece el siguiente nodo del nuevo nodo como el siguiente nodo del nodo dado
+    node->next = newNode; // Establece el siguiente nodo del nodo dado como el nuevo nodo
 
 }
 
