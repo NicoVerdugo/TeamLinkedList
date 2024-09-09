@@ -71,9 +71,16 @@ void LinkedList<T>::addNodeLast(T *) {
 
 template<class T>
 void LinkedList<T>::addNodeFirst(T * node) {
-    Node<T> *xxxx = new Node<T>( node );
+        Node<T> *newNode = new Node<T>(node);
 
-}
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            newNode->next = head;
+            head = newNode;
+        }
+    }
+
 /**
  * Responsable Riaño Herrera
  * Método que valida si la lista está vacía
