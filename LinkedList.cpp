@@ -1,3 +1,4 @@
+
 //
 // Created by Jairo Riaño on 6/09/24.
 //
@@ -34,9 +35,23 @@ T *LinkedList<T>::deleteNode(Node<T> *) {
     return nullptr;
 }
 
+/**
+ * Responsable Guevara Uribe
+ * Método que obtiene una lista enlazada
+ * @tparam T Elementos de la lista enlazada
+ * @return Vector con los apuntadores de los elementos de la lista
+ */
 template<class T>
 std::vector<T *> LinkedList<T>::getLinkedList() {
-    return std::vector<T *>();
+
+    std::vector<T *> list;
+    Node<T> *node = head;
+
+    while (node != nullptr) {
+        list.push_back(node->info);
+        node = node->next;
+    }
+    return list;
 }
 
 template<class T>
@@ -96,4 +111,3 @@ template<class T>
 LinkedList<T>::~LinkedList() {
 
 }
-
